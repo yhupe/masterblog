@@ -8,7 +8,7 @@ class Storage:
         if not isinstance(author, str):
             raise ValueError("Author name must be a string")
         if not isinstance(content, str) and len(content) <= 5:
-            raise ValueError("Blog post must be a sring and min. of 5 characters")
+            raise ValueError("Blog post must be a string and min. of 5 characters")
 
         self.title = title
         self.id = id

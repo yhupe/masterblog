@@ -16,6 +16,8 @@ h1 {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
+    list-style-type: none; /* Entfernt die Bullet Points */
+
 }
 
 .post h2 {
