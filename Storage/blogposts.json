@@ -1,5 +1,14 @@
 [
-    {"id": 1, "author": "John Doe", "title": "First Post", "content": "This is my first post."},
-    {"id": 2, "author": "Anna Holzknecht", "title": "My Love <3", "content": "OMG Hannes is the best and the most beautiful man ever x3 "}
-
+    {
+        "id": "2",
+        "author": "Jane Doe",
+        "title": "Second Post",
+        "content": "This is another post."
+    },
+    {
+        "id": "e475208f-aad1-473a-a576-fb33f75f0dd9",
+        "title": "skiii",
+        "author": "Hupi",
+        "content": "lolololololo"
+    }
 ]
