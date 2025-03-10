@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 import json
 import os
 
@@ -18,9 +18,15 @@ def index():
 
 @app.route('/add', methods=['GET', 'POST'])
 def add():
+
+    title = request.form.get('title')
+    author = request.form.get('author')
+    content = request.form.get('content')
+
     if request.method == 'POST':
-        # We will fill this in the next step
-        pass
+        print(f"new post '{title}' added by {author}")
+
+        return redirect(url_for('index'))
     return render_template('add.html')
 
 if __name__ == '__main__':
