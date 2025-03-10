@@ -63,8 +63,7 @@ input, textarea {
     margin-bottom: 15px;
 }
 
-/* Button */
-button {
+.submit-btn {
     background: #cf1111a0;
     color: white;
     border: none;
@@ -72,27 +71,34 @@ button {
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    width: 100%;
+    width: 48%;
+    text-align: center;
+    display: inline-block;
     transition: background 0.3s ease;
+    box-sizing: border-box;
 }
 
-/* Button Hover-Effekt */
-button:hover {
-    background: #cf1111c5;
-}
-
-.delete-btn {
-    background-color: #474747a8;
+.delete-btn, .update-btn {
+    background: #cf1111a0;
     color: white;
     border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-size: 14px;
+    padding: 5px 15px;
+    margin: 2.5px;
+    font-size: 16px;
     border-radius: 5px;
-    width: 8%;
-
+    cursor: pointer;
+    width: 10%;
+    text-align: center;
+    display: inline-block;
+    transition: background 0.3s ease;
+    box-sizing: border-box;
 }
 
-.delete-btn:hover {
-    background-color: #ffbec059;
+/* Entfernt die Text-Dekoration von Links */
+.update-btn {
+    text-decoration: none; /* Entfernt die Unterstreichung */
+}
+
+.delete-btn:hover, .update-btn:hover, submit-btn:hover {
+    background-color: #3b3b3b;
 }

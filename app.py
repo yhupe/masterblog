@@ -10,6 +10,23 @@ app = Flask(__name__)
 
 file_path = os.path.join(os.path.dirname(__file__), 'Storage', 'blogposts.json')
 
+def load_json_posts(path):
+    with open(path, 'r') as fileobj:
+        blogposts = json.load(fileobj)
+
+    return blogposts
+
+
+def fetch_post_by_id(post_id):
+
+    with open(file_path, 'r') as fileobj:
+        blogposts = json.load(fileobj)
+    for post in blogposts:
+        if post["id"] == post_id:
+            return post
+    return None
+
+
 @app.route('/')
 def index():
 
@@ -76,6 +93,37 @@ def delete_post(post_id):
         return redirect(url_for('index'))
 
     return render_template('deleted_note.html')
+
+
+@app.route('/update/<post_id>', methods=['GET', 'POST'])
+def update_post(post_id):
+
+    with open(file_path, 'r') as fileobj:
+        blogposts = json.load(fileobj)
+
+    post = next((p for p in blogposts if p["id"] == post_id), None)
+
+    if post is None:
+        return "Post not found", 404
+
+    if request.method == 'POST':
+        print(request.form)
+
+        updated_title = request.form.get('updated_title')
+        updated_content = request.form.get('updated_content')
+
+        post["title"] = updated_title
+        post["content"] = updated_content
+
+        print(f"Updated Title: {updated_title}, Updated Content: {updated_content}")
+
+        with open(file_path, 'w') as fileobj:
+            json.dump(blogposts, fileobj, indent=4)
+
+        return redirect(url_for('index'))
+
+
+    return render_template('update.html', post=post)
 
 
 

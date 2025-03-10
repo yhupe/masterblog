@@ -1,14 +1,20 @@
 [
     {
-        "id": "2",
-        "author": "Jane Doe",
-        "title": "Second Post",
-        "content": "This is another post."
+        "id": "2b43b294-aa49-4670-a89a-78bad761a991",
+        "title": "Wetter",
+        "author": "Hans",
+        "content": "Das wetter ist schoen x3"
     },
     {
-        "id": "e475208f-aad1-473a-a576-fb33f75f0dd9",
-        "title": "skiii",
-        "author": "Hupi",
-        "content": "lolololololo"
+        "id": "4cf721c9-e2c1-4142-91e0-c63391dd4950",
+        "title": "Alter",
+        "author": "hannes",
+        "content": "chatgpt ist so dumm"
+    },
+    {
+        "id": "2d10bc0e-6227-4332-bc79-9c8867d7b34f",
+        "title": "Was geht ",
+        "author": "Hannes",
+        "content": "gehts jetzt ?"
     }
 ]
